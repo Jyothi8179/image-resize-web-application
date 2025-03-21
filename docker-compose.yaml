@@ -1,0 +1,25 @@
+version: '3.8'
+
+services:
+  app:
+    container_name: image-resize-app
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "8080:8080"
+    environment:
+      SPRING_DATASOURCE_URL: jdbc:mysql://db:3306/image_resize_db
+      SPRING_DATASOURCE_USERNAME: root
+      SPRING_DATASOURCE_PASSWORD: root
+    depends_on:
+      - db
+
+  db:
+    container_name: image-resize-db
+    image: mysql:8.0
+    ports:
+      - "3307:3306" # Any of the available ports
+    environment:
+      MYSQL_DATABASE: image_resize_db
+      MYSQL_ROOT_PASSWORD: root
