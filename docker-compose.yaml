@@ -33,6 +33,7 @@ services:
   db:
     container_name: image-resize-db
     image: mysql:8.0
+    platform: linux/x86_64
     ports:
       - "3306:3306" # Any of the available ports
     environment:
