@@ -6,13 +6,16 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="resize" />
+        <module name="app" />
+        <module name="backend" />
       </profile>
     </annotationProcessing>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
-      <module name="resize" options="-parameters" />
+      <module name="app" options="-parameters" />
+      <module name="backend" options="-parameters" />
+      <module name="resize" options="" />
     </option>
   </component>
 </project>

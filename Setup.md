@@ -28,7 +28,7 @@ To create a Docker image of your Spring Boot application, run:
 #### 3. Run Docker Container
 Run the application container:
 ```shell
-  docker run -p 8080:8080 image-resize-app
+  docker run -p 7070:7070 image-resize-app
 ```
 
 ---

@@ -11,8 +11,9 @@
 	<groupId>com.image.processor</groupId>
 	<artifactId>resize</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
+	<packaging>pom</packaging>
 	<name>resize</name>
-	<description>Image Processing Application</description>
+	<description>Image Web Processing Application</description>
 	<url/>
 	<licenses>
 		<license/>
@@ -20,12 +21,11 @@
 	<developers>
 		<developer/>
 	</developers>
-	<scm>
-		<connection/>
-		<developerConnection/>
-		<tag/>
-		<url/>
-	</scm>
+	<modules>
+		<module>backend</module>
+		<module>app</module>
+	</modules>
+
 	<properties>
 		<java.version>17</java.version>
 	</properties>
@@ -58,12 +58,15 @@
 <!--			<scope>test</scope>-->
 		</dependency>
 	</dependencies>
-
 	<build>
 		<plugins>
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
+				<version>3.4.4</version>
+				<configuration>
+					<mainClass>com.image.processor.resize.ResizeWebApplication</mainClass>
+				</configuration>
 			</plugin>
 		</plugins>
 	</build>
