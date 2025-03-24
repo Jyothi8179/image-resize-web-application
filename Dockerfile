@@ -3,6 +3,7 @@ FROM openjdk:17-jdk-slim
 
 # Set the working directory in the container
 WORKDIR /app
+RUN mkdir -p /app/uploaded_images
 
 # Copy the application JAR to the container
 COPY app/target/app-0.0.1-SNAPSHOT.jar app.jar
