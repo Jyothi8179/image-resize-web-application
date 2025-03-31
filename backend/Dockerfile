@@ -15,7 +15,7 @@ RUN apt-get update && apt-get install -y imagemagick && rm -rf /var/lib/apt/list
 
 
 COPY ./target/backend-0.0.1-SNAPSHOT.jar image_processor.jar
-COPY ./src/main/resources/test.jpg test.jpg
+COPY ./src/main/resources/test.jpeg test.jpeg
 
 ENTRYPOINT ["java", "-jar", "image_processor.jar"]
 

@@ -15,7 +15,7 @@ public class ImageResizeService {
 
     static {
         try{
-            byte[] res = resizeImage("test.jpg", 1080,720, "resized.jpeg");
+            byte[] res = resizeImage("test.jpeg", 1080,720, "resized.jpeg");
             System.out.println(res);
 
         }catch (Exception e){
